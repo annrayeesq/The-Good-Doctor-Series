@@ -4,8 +4,146 @@
     <meta charset="UTF-8">
     <title>The Good Doctor Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+
+    <!-- INTERNAL CSS -->
+    <style>
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* BASE */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0e1a2b;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* HEADER */
+        .site-header {
+            text-align: center;
+            padding: 25px;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+        }
+
+        .site-header h1 {
+            font-size: 2.5rem;
+        }
+
+        /* LAYOUT */
+        .layout {
+            display: flex;
+            max-width: 1100px;
+            margin: 20px auto;
+            gap: 20px;
+            padding: 0 20px;
+        }
+
+        /* MAIN CONTENT */
+        .main-content {
+            width: 70%;
+        }
+
+        .blog-post {
+            background-color: #16263f;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* SLIDER */
+        .slider {
+            position: relative;
+            width: 100%;
+            margin: 15px 0;
+        }
+
+        .slider img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        /* ARROWS */
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: none;
+            padding: 10px 14px;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        .arrow.left {
+            left: 10px;
+        }
+
+        .arrow.right {
+            right: 10px;
+        }
+
+        .arrow:hover {
+            background-color: rgba(102, 178, 255, 0.8);
+        }
+
+        /* SIDEBAR */
+        .sidebar {
+            width: 30%;
+            background-color: #0b1422;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .sidebar h3 {
+            margin-bottom: 10px;
+            color: #66b2ff;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            margin-bottom: 15px;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+
+        .sidebar img {
+            width: 100%;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        /* FOOTER */
+        .site-footer {
+            text-align: center;
+            padding: 15px;
+            font-size: 0.85rem;
+            background-color: #0b1422;
+            margin-top: 20px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 767px) {
+            .layout {
+                flex-direction: column;
+            }
+
+            .main-content,
+            .sidebar {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
 <header class="site-header">
@@ -17,127 +155,57 @@
     <!-- MAIN CONTENT -->
     <main class="main-content">
 
-        <!-- BLOG POST -->
         <article class="blog-post">
             <h2>The Good Doctor: A Story of Compassion</h2>
 
-            <!-- IMAGE SLIDER -->
             <div class="slider">
                 <button class="arrow left" onclick="prevSlide()">&#10094;</button>
-
                 <img id="slideImage"
                      src="https://deadline.com/wp-content/uploads/2020/02/152740_group_v1-900x0-1.jpg"
                      alt="The Good Doctor Slider">
-
                 <button class="arrow right" onclick="nextSlide()">&#10095;</button>
             </div>
 
-            <p>
-                <strong>The Good Doctor</strong> is a medical drama series that centers on
-                Dr. Shaun Murphy, a brilliant young surgeon with autism and savant syndrome.
-                His journey highlights empathy, resilience, and the importance of inclusion
-                in the workplace.
-            </p>
+            <p><strong>The Good Doctor</strong> is an American medical drama series created by David Shore, based on a South Korean series of the same name. It follows Dr. Shaun Murphy, a young surgical resident with autism and savant syndrome, played by Freddie Highmore. Shaun begins working at San Jose St. Bonaventure Hospital, where his exceptional medical skills contrast with his struggles in communication and social interaction, making his journey both inspiring and challenging.
 
-            <p>
-                Shaun’s unique way of thinking allows him to see medical cases differently,
-                often leading to life-saving solutions that others might overlook.
-                However, his path is not easy, as he constantly faces doubt and misunderstanding.
-            </p>
+The series focuses on intense medical cases while also highlighting Shaun’s personal growth, relationships with his colleagues, and ethical dilemmas in the hospital. Alongside Shaun, the show features a diverse cast of doctors and surgeons who face their own professional and emotional challenges. A major theme of the show is acceptance—showing that being different does not mean being incapable.
 
-            <p>
-                Through emotional storytelling and realistic medical scenarios, the show
-                explores ethical dilemmas, teamwork, and personal growth inside a hospital setting.
-            </p>
-
-            <h3>Main Themes of the Series</h3>
-            <p>
-                One of the strongest themes of The Good Doctor is acceptance.
-                The series challenges viewers to rethink assumptions about disability
-                and intelligence in professional environments.
-            </p>
-
-            <p>
-                Another important theme is compassion. Doctors are not only healers of the body
-                but also supporters of emotional well-being, both for patients and colleagues.
-            </p>
-
-            <h3>Why the Show Matters</h3>
-            <p>
-                The Good Doctor has been praised for raising awareness about autism spectrum disorder.
-                By presenting Shaun as a capable and complex individual, the show promotes empathy
-                and understanding among its audience.
-            </p>
-
-            <p>
-                Many viewers relate to the struggles of the characters, making the show
-                both inspirational and emotionally engaging.
-            </p>
+The Good Doctor originally aired on ABC from 2017 to 2024, running for 7 seasons. It became popular worldwide for its emotional storytelling and strong performances, especially Freddie Highmore’s portrayal of Shaun Murphy. The show is available on Netflix in some regions, while in others it can be streamed on platforms like Hulu or Disney+, depending on location.</p><p></p>
         </article>
 
-        <!-- SECOND ARTICLE -->
         <article class="blog-post">
             <h2>Character Development and Relationships</h2>
+            <p>The central to the series and evolve strongly over time. Dr. Shaun Murphy begins as a highly skilled but socially isolated surgical resident who struggles with communication and emotional expression. As the series progresses, Shaun gains confidence, improves his ability to advocate for himself, and grows both professionally and personally. His journey highlights how experience, mentorship, and persistence help him navigate challenges related to his autism while proving his value as a surgeon.
 
-            <p>
-                Throughout the series, characters experience significant growth.
-                Shaun learns how to navigate friendships, romance, and leadership
-                while remaining true to himself.
-            </p>
-
-            <p>
-                Supporting characters also face personal challenges, making the hospital
-                environment feel realistic and human.
-            </p>
-
-            <p>
-                These evolving relationships add depth to the show and keep audiences invested
-                in the characters’ journeys.
-            </p>
+Relationships play a major role in Shaun’s growth. His bond with Dr. Aaron Glassman serves as a father-figure relationship built on trust, guidance, and tough love. Shaun’s romantic relationship with Lea Dilallo shows his emotional development, exploring love, conflict, and compromise. Meanwhile, his interactions with colleagues—such as Claire Browne, Marcus Andrews, and others—shift from skepticism to respect, emphasizing themes of acceptance, teamwork, and understanding in both personal and professional relationships.</p>
+            
         </article>
 
-        <!-- THIRD ARTICLE -->
         <article class="blog-post">
             <h2>Medical Accuracy and Storytelling</h2>
+            <p>The series presents medical cases inspired by real-life conditions, maintaining medical realism while simplifying complex procedures and ethical issues for viewers. Although dramatized at times, it remains informative and engaging.
 
-            <p>
-                The Good Doctor is known for presenting complex medical cases in an understandable way.
-                The show balances technical accuracy with emotional storytelling,
-                making it accessible to a wide audience.
-            </p>
-
-            <p>
-                Each episode often delivers a lesson about empathy, ethics, or perseverance,
-                leaving viewers with something meaningful to reflect on.
-            </p>
+Each episode blends medical cases with emotional storytelling, often linking patients’ conditions to the personal struggles of the doctors, especially Shaun Murphy. This balance of accuracy and emotion makes *The Good Doctor* both educational and impactful.
+</p>
         </article>
 
     </main>
 
     <!-- SIDEBAR -->
-    <!-- SIDEBAR -->
-<aside class="sidebar">
-    <h3>Recent Posts</h3>
-    <ul>
-        <li>Final Season Highlights</li>
-        <li>Shaun Murphy’s Growth</li>
-        <li>Top Emotional Episodes</li>
-        <li>Why Fans Love the Show</li>
-        <li>Best Medical Cases</li>
-        <li>Most Inspiring Quotes</li>
-    </ul>
+    <aside class="sidebar">
+        <h3>Recent Posts</h3>
+        <ul>
+            <li>Final Season Highlights</li>
+            <li>Shaun Murphy’s Growth</li>
+            <li>Top Emotional Episodes</li>
+            <li>Why Fans Love the Show</li>
+            <li>Best Medical Cases</li>
+            <li>Most Inspiring Quotes</li>
+        </ul>
 
-    <img src="https://soaps.sheknows.com/wp-content/uploads/2023/07/The-Good-Doctor-Cast.jpg" alt="The Good Doctor Cast">
-
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1dUYXLYWBlWksySho-Pcmm_-yBsUFbCF75g&s" alt="Hospital Scene">
-
-    <img src="https://images.immediate.co.uk/production/volatile/sites/3/2024/01/TheGoodDoctor-FreddieHighmore-1c3e268.jpg?resize=1366,911" alt="Freddie Highmore">
-
-    <img src="https://www.hollywoodreporter.com/wp-content/uploads/2017/10/147520_6110_-_h_2017.jpg?w=1296&h=730&crop=1" alt="The Good Doctor 2017">
-
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPACaFeUbqtcF0cKPWEPLu19J5bO5P0rxxZw&s" alt="The Good Doctor Scene">
-</aside>
-
+        <img src="https://soaps.sheknows.com/wp-content/uploads/2023/07/The-Good-Doctor-Cast.jpg" alt="Cast">
+        <img src="https://images.immediate.co.uk/production/volatile/sites/3/2024/01/TheGoodDoctor-FreddieHighmore-1c3e268.jpg" alt="Freddie Highmore">
+    </aside>
 
 </div>
 
@@ -150,7 +218,6 @@
     const images = [
         "https://deadline.com/wp-content/uploads/2020/02/152740_group_v1-900x0-1.jpg",
         "https://telltaletv.com/wp-content/uploads/2021/02/158016_9284-scaled.jpg",
-        "https://hollywoodlife.com/wp-content/uploads/2020/11/the-good-doctor-abc-ftr.jpg",
         "https://hollywoodlife.com/wp-content/uploads/2020/11/the-good-doctor-abc-ftr.jpg"
     ];
 
